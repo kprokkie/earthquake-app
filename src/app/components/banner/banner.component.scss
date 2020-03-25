@@ -1,0 +1,16 @@
+@import '../../../variables.scss';
+
+.app-banner {
+    .banner {
+        background: url('../../../assets/images/bg-card.png');
+        background-size: contain;
+        background-color: $gray;
+        padding: $padding-default;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .banner {
+        margin-top: $margin-default;
+    }
+}

@@ -1,0 +1,54 @@
+// color
+$red: #f35001;
+$orange: #feaf17;
+$green: #abcb42;
+$white: #ffffff;
+$black: #000000;
+$gray: #e8e8e8;
+
+// animation delay
+$delay-min: .1s;
+$delay-mid: .5s;
+$delay-max: 1s;
+
+// border
+$border-width-default: .1rem;
+
+// margin
+$margin-default: 1rem;
+$margin-base: 0.4rem;
+$margin-size-xs: $margin-base;
+$margin-size-sm: $margin-base * 2;
+$margin-size-md: $margin-base * 3;
+$margin-size-lg: $margin-base * 4;
+$margin-size-xl: $margin-base * 5;
+
+// padding
+$padding-default: 1rem;
+$padding-base: 0.4rem;
+$padding-size-xs: $padding-base;
+$padding-size-sm: $padding-base * 2;
+$padding-size-md: $padding-base * 3;
+$padding-size-lg: $padding-base * 4;
+$padding-size-xl: $padding-base * 5;
+
+// font size
+$font-default: 1.4rem;
+$font-base: 0.4rem;
+$font-size-xs: $font-base * 3;
+$font-size-sm: $font-base * 6;
+$font-size-md: $font-base * 9;
+$font-size-lg: $font-base * 12;
+$font-size-xl: $font-base * 15;
+
+// box shadows
+$shadow-1: 0 1px 3px rgba(0, 0, 0, 0.12),
+0 1px 2px rgba(0, 0, 0, 0.24);
+$shadow-2: 0 3px 6px rgba(0, 0, 0, 0.16),
+0 3px 6px rgba(0, 0, 0, 0.23);
+$shadow-3: 0 10px 20px rgba(0, 0, 0, 0.19),
+0 6px 6px rgba(0, 0, 0, 0.23);
+$shadow-4: 0 14px 28px rgba(0, 0, 0, 0.25),
+0 10px 10px rgba(0, 0, 0, 0.22);
+$shadow-5: 0 19px 38px rgba(0, 0, 0, 0.30),
+0 15px 12px rgba(0, 0, 0, 0.22);

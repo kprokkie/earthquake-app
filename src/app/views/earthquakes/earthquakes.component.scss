@@ -1,0 +1,50 @@
+@import '../../../variables.scss';
+
+$list-width: 40rem;
+
+.app-earthquakes {
+    display: flex;
+    
+    .earthquake-list {
+        width: $list-width;
+        display: flex;
+        flex-direction: column;
+
+        height: calc(100vh - 120px);
+        overflow-y: auto;
+
+        > app-card {
+            margin: $margin-default $margin-default 0;
+
+            &:last-child {
+                margin-bottom: $margin-default;
+            }
+        }
+    }
+
+    .earthquake-map {
+        flex: 4;
+    }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+    .app-earthquakes {
+        flex-direction: column-reverse;
+
+        .earthquake-list {
+            width: inherit;
+            height: calc(100vh - 380px);
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .app-earthquakes {
+        .earthquake-list {
+            width: inherit;
+            height: calc(100vh - 340px);
+        }
+    }
+}

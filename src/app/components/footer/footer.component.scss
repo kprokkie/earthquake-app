@@ -1,0 +1,32 @@
+@import '../../../variables.scss';
+
+.app-footer {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 $padding-default;
+    background: url('../../../assets/images/bg-header.png');
+    background-position: center;
+
+    a {
+        font-size: $font-default;
+        font-weight: bold;
+        margin: 0 $margin-size-xs;
+        color: $black;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .app-footer {
+        height: 30px;
+
+        a {
+            font-size: $font-size-xs;
+        }
+    }
+}

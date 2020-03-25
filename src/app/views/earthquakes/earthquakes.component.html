@@ -1,0 +1,10 @@
+<div class="app-earthquakes">
+    <div class="earthquake-list">
+        <app-card [earthquake]="earthquake" [selectedEarthquake]="selectedEarthquake"
+            (cardEmitter)="cardListener($event)" *ngFor="let earthquake of earthquakes$ | async">
+        </app-card>
+    </div>
+    <div class="earthquake-map">
+        <app-map [earthquakes]="earthquakes$ | async" [selectedEarthquake]="selectedEarthquake"></app-map>
+    </div>
+</div>

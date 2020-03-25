@@ -1,0 +1,24 @@
+@import '../../../variables.scss';
+
+.app-map {
+    display: flex;
+    flex-direction: column;
+    padding: $padding-default;
+    border-left: $border-width-default dotted $gray;
+
+    #mapChart {
+        width: 100%;
+        margin-top: $margin-default;
+        height: calc(100vh - 190px);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .app-map {
+        padding: 0 $padding-default;
+
+        #mapChart {
+            height: 200px;
+        }
+    }
+}
