@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
 import { Earthquake } from '../../interfaces/earthquake.interface';
 import { MAGNITUDE } from '../../constants/magnitude.constants';
-// import { COLOR } from '../../constants/color.constants';
 
 @Component({
   selector: 'app-card',
@@ -15,12 +15,9 @@ export class CardComponent implements OnInit {
 
   @Output() cardEmitter: EventEmitter<Earthquake> = new EventEmitter<Earthquake>();
 
-  isSelected: boolean;
-
   constructor() { }
 
   ngOnInit(): void {
-    this.isSelected = this.earthquake === this.selectedEarthquake;
   }
 
   getClass(): string {

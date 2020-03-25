@@ -4,6 +4,7 @@ import * as am4maps from "@amcharts/amcharts4/maps";
 import am4geodata_worldLow from "@amcharts/amcharts4-geodata/worldLow";
 
 import { Earthquake } from '../../interfaces/earthquake.interface';
+import { Map } from '../../interfaces/map.interface';
 
 import { MAGNITUDE } from '../../constants/magnitude.constants';
 import { COLOR } from '../../constants/color.constants';
@@ -18,7 +19,7 @@ export class MapComponent implements OnInit, OnChanges, OnDestroy, AfterViewInit
   @Input() earthquakes: Earthquake[];
   @Input() selectedEarthquake: Earthquake;
 
-  mapData: any[];
+  mapData: Map[];
   imageSeries: am4maps.MapImageSeries;
   mapChart: am4maps.MapChart;
 
@@ -29,7 +30,6 @@ export class MapComponent implements OnInit, OnChanges, OnDestroy, AfterViewInit
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-
     if (!!changes && !!changes.selectedEarthquake.currentValue) {
 
       this.mapChart.goHome();
@@ -44,8 +44,6 @@ export class MapComponent implements OnInit, OnChanges, OnDestroy, AfterViewInit
         }, 3);
       }, 1000);
 
-      console.log(this.mapChart.zoomLevel);
-      console.log(this.mapChart.zoomGeoPoint);
     } else {
       if (this.mapChart) {
         this.mapData = this.generateMapData(this.earthquakes);
@@ -54,10 +52,9 @@ export class MapComponent implements OnInit, OnChanges, OnDestroy, AfterViewInit
         this.mapChart.goHome();
       }
     }
-
   }
 
-  generateMapData(earthquakes): Earthquake[] {
+  generateMapData(earthquakes): Map[] {
     return earthquakes.map((eq: Earthquake) => {
       return {
         title: eq.magnitude,

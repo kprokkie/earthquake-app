@@ -8,6 +8,6 @@ export const initialState: AppState = {
     earthquakesState: earthquakeReducer.initialState
 }
 
-export const Reducers = {
+export const reducers = {
     earthquakesState: earthquakeReducer.reducer
 }

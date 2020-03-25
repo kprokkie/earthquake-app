@@ -1,5 +1,5 @@
 import {EarthquakeEffects} from './earthquake.effects';
 
-export const Effects = [
+export const effects = [
     EarthquakeEffects
 ];
