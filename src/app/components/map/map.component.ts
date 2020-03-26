@@ -31,7 +31,6 @@ export class MapComponent implements OnInit, OnChanges, OnDestroy, AfterViewInit
 
   ngOnChanges(changes: SimpleChanges): void {
     if (!!changes && !!changes.selectedEarthquake.currentValue) {
-
       this.mapChart.goHome();
 
       setTimeout(() => {

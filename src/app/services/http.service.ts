@@ -23,18 +23,12 @@ export class HttpService {
       )
   }
 
-  /**
-   * Handle error
-   * @param err - error in response
-   */
   handleError(err) {
     let errorMessage: string;
     if (err.error instanceof ErrorEvent) {
-      // client-side or network error occurred. Handle it accordingly.
       errorMessage = `An error occurred: ${err.error.message}`;
     } else {
-      // back-end returned an unsuccessful response code & response body may contain what went wrong.
-      errorMessage = `Backend returned code ${err.status}: ${err.body.error}`;
+      errorMessage = `Backend returned code ${err.status}: ${err.statusText}`;
     }
     console.error(err);
     return throwError(errorMessage);

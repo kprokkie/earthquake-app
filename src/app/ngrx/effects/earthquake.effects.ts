@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 
 import { EMPTY } from 'rxjs';
@@ -14,6 +15,7 @@ export class EarthquakeEffects {
 
     constructor(
         private actions$: Actions,
+        private router: Router,
         private httpService: HttpService
     ) { }
 
@@ -21,9 +23,11 @@ export class EarthquakeEffects {
         ofType(fromEarthquakeActions.EarthquakeActionTypes.GET_EARTHQUAKES),
         mergeMap(() => this.httpService.getEarthquakes()
             .pipe(
-                tap((data) => console.log('Effects Service: ', data)),
                 map((data: Earthquake[]) => (fromEarthquakeActions.loadEarthquakes({ payload: data }))),
-                catchError(() => EMPTY)
+                catchError(() => {
+                    this.router.navigateByUrl('/error');
+                    return EMPTY;
+                })
             )))
     );
 }
