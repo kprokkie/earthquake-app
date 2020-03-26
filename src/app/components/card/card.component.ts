@@ -21,10 +21,14 @@ export class CardComponent implements OnInit {
   }
 
   getClass(): string {
-    let magnitude = this.earthquake.magnitude;
-    if (magnitude >= MAGNITUDE.RANGE.HIGH) return MAGNITUDE.CLASS.HIGH;
-    else if (magnitude >= MAGNITUDE.RANGE.MEDIUM) return MAGNITUDE.CLASS.MEDIUM;
-    else return MAGNITUDE.CLASS.LOW;
+    const magnitude = this.earthquake.magnitude;
+    if (magnitude >= MAGNITUDE.RANGE.HIGH) {
+      return MAGNITUDE.CLASS.HIGH;
+    } else if (magnitude >= MAGNITUDE.RANGE.MEDIUM) {
+      return MAGNITUDE.CLASS.MEDIUM;
+    } else {
+      return MAGNITUDE.CLASS.LOW;
+    }
   }
 
   clickCard(): void {

@@ -16,7 +16,8 @@ export class EarthquakesResolver implements Resolve<Action> {
 
     earthquakes$: Observable<Earthquake[]>;
 
-    constructor(private store: Store<AppState>,
+    constructor(
+        private store: Store<AppState>,
         private actions$: Actions) { }
 
     resolve(): Observable<Action> {

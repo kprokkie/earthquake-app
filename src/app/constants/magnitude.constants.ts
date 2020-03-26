@@ -9,4 +9,4 @@ export const MAGNITUDE = {
         MEDIUM: 'medium',
         LOW: 'low'
     }
-}
+};

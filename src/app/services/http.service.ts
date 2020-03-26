@@ -20,7 +20,7 @@ export class HttpService {
         tap((data: { earthquakes: Earthquake[] }) => console.log('HTTP Service: ', data)),
         map((data: { earthquakes: Earthquake[] }) => data.earthquakes),
         catchError(this.handleError)
-      )
+      );
   }
 
   handleError(err) {

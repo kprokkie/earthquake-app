@@ -31,7 +31,7 @@ describe('EarthquakesComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(EarthquakesComponent);
     component = fixture.componentInstance;
-    store = TestBed.get(Store);
+    store = TestBed.inject(Store);
     fixture.detectChanges();
   });
 

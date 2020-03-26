@@ -6,8 +6,8 @@ export interface AppState {
 
 export const initialState: AppState = {
     earthquakesState: earthquakeReducer.initialState
-}
+};
 
 export const reducers = {
     earthquakesState: earthquakeReducer.reducer
-}
+};

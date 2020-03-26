@@ -1,5 +1,5 @@
 export interface Earthquakes {
-    earthquakes: Earthquake[]
+    earthquakes: Earthquake[];
 }
 
 export interface Earthquake {

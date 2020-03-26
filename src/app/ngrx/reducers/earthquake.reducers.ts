@@ -9,7 +9,7 @@ export interface EarthquakeState {
 
 export const initialState: EarthquakeState = {
     earthquakes: []
-}
+};
 
 const earthquakeReducer = createReducer(
     initialState,
