@@ -8,11 +8,11 @@ It is real time Earthquakes Application (Responsive) using [GeoNames](https://ww
 
 ## What you see here in App
 
-![Screenshot](./src/assets/images/app-info.png)
-
 Application will display all the earthquakes information in list & its corresponding location in map.
 
-Actioning (click) on card will show more equarthquake information & will zoom the map for that earthquake location.
+Actioning (click) on card will show more equarthquake information & will zoom the map for its respective location.
+
+![Screenshot](./src/assets/images/app-info.png)
 
 > Cards color & Spot Circles color are based on the `magnitude` of earthquake.
 
