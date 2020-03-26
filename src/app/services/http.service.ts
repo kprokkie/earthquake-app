@@ -5,7 +5,7 @@ import { Observable, throwError } from 'rxjs';
 import { map, tap, catchError } from 'rxjs/operators';
 
 import { Earthquake } from '../interfaces/earthquake.interface';
-import { DOMAIN_API, EARTHQUAKE_API } from '../constants/api.constants';
+import { environment } from './../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +15,7 @@ export class HttpService {
   constructor(private http: HttpClient) { }
 
   getEarthquakes(): Observable<Earthquake[]> {
-    return this.http.get<{ earthquakes: Earthquake[] }>(`${DOMAIN_API}${EARTHQUAKE_API}`)
+    return this.http.get<{ earthquakes: Earthquake[] }>(environment.APIEndpoint)
       .pipe(
         tap((data: { earthquakes: Earthquake[] }) => console.log('HTTP Service: ', data)),
         map((data: { earthquakes: Earthquake[] }) => data.earthquakes),
